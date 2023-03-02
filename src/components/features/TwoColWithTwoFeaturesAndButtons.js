@@ -46,13 +46,13 @@ const FeatureDescription = tw.div`mt-1 text-sm`;
 const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
 
 export default ({
-  subheading = "Our Expertise",
+  subheading = "Nuestra experiencia",
   heading = (
     <>
-      We have the most <span tw="text-primary-500">professional</span> marketing team.
+      Somos un <span tw="text-primary-500">equipo</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "dedicado de profesionales dispuestos a brindarles un servicio de calidad",
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,
@@ -67,13 +67,13 @@ export default ({
   const defaultFeatures = [
     {
       Icon: BriefcaseIcon,
-      title: "Professionalism",
-      description: "We have the best professional marketing people across the globe just to work with you."
+      title: "28 Profesionales",
+      description: "Excepcionales dispuestos a ayudarte en lo que necesites"
     },
     {
       Icon: MoneyIcon,
-      title: "Affordable",
-      description: "We promise to offer you the best rate we can - at par with the industry standard."
+      title: (new Date().getFullYear()) - 2004 + " años de experiencia",
+      description: "En brindar servicios técnicos especializados de monitoreo y control"
     }
   ];
 

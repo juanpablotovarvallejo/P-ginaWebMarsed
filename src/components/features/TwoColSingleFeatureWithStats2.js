@@ -45,8 +45,10 @@ export default ({
       MARSED S.A.
     </>
   ),
-  subheading = "Nuestra trayectoria",
-  description = "Servicios Técnicos Especializados",
+  subheading = "Servicios Técnicos Especializados",
+  description = "MARSED S.A. es una empresa que brinda servicios técnicos especializados de monitoreo y control de servicios públicos "+
+  "domiciliarios con alto reconocimiento nacional en la prestación de servicios tecnológicos con alto nivel de calidad, excelencia y rentabilidad,"+
+  "proponiendo soluciones técnicas integradoras e innovadoras orientadas a satisfacer las necesidades de los usuarios.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
@@ -89,17 +91,17 @@ export default ({
             <Heading>{heading}</Heading>
             {subheading && <Subheading>{subheading}</Subheading>}
             <Description>{description}</Description>
-            <Statistics>
+            {/* <Statistics>
               {statistics.map((statistic, index) => (
                 <Statistic key={index}>
                   <Value>{statistic.value}</Value>
                   <Key>{statistic.key}</Key>
                 </Statistic>
               ))}
-            </Statistics>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
+            </Statistics> */}
+            {/* <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

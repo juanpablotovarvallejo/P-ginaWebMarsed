@@ -40,7 +40,7 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 export default ({
   subheading = "",
   heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
+  description = "",
   imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
   imageContain = false,
   imageShadow = true,
@@ -52,24 +52,24 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
-      answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+      question: "Sector Eléctrico",
+      answer1: "Medidores Inteligentes Residenciales, Comerciales, Industriales, Transformadores",
+      answer2: "Accesorios de Instalación, Lámparas de Alumbrado Público, Postes, Transformadores, Cable",
+      answer3: "Sistema de Comercialización Software (MILA)",
+      answer4: "Redes de Distribución",
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      question: "Agua Potable",
+      answer1: "Medidores Inteligentes para Consumo Residencial, Comercial e Industrial",
+      answer2: "Válvulas de Distribución con Medición y Control con Telemetría",
+      answer3: "Sistema de Comercialización Hardware y Software",
+      answer4: "Plantas Potabilizadoras",
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      question: "Where can I reach you for support ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      question: "Gas Canalizado GLP",
+      answer1: "Medidores Inteligentes para Consumo Residencial, Comercial e Industrial",
+      answer2: "Sistema de Canalización para Edificios, Residencias, Conjuntos, Centros Comerciales",
+      answer3: "Válvula de Apertura y Cierre con Control de Telemetría",
     }
   ];
 
@@ -109,7 +109,7 @@ export default ({
                         {activeQuestionIndex === index ? <MinusIcon /> : <PlusIcon />}
                       </QuestionToggleIcon>
                     </Question>
-                    <Answer
+                    {faq.answer1 ? <Answer
                       variants={{
                         open: { opacity: 1, height: "auto", marginTop: "16px" },
                         collapsed: { opacity: 0, height: 0, marginTop: "0px" }
@@ -118,8 +118,41 @@ export default ({
                       animate={activeQuestionIndex === index ? "open" : "collapsed"}
                       transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
                     >
-                      {faq.answer}
-                    </Answer>
+                      {faq.answer1}
+                    </Answer> : null}
+                    {faq.answer2 ? <Answer
+                      variants={{
+                        open: { opacity: 1, height: "auto", marginTop: "16px" },
+                        collapsed: { opacity: 0, height: 0, marginTop: "0px" }
+                      }}
+                      initial="collapsed"
+                      animate={activeQuestionIndex === index ? "open" : "collapsed"}
+                      transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    >
+                      {faq.answer2}
+                    </Answer> : null}
+                    {faq.answer3 ? <Answer
+                      variants={{
+                        open: { opacity: 1, height: "auto", marginTop: "16px" },
+                        collapsed: { opacity: 0, height: 0, marginTop: "0px" }
+                      }}
+                      initial="collapsed"
+                      animate={activeQuestionIndex === index ? "open" : "collapsed"}
+                      transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    >
+                      {faq.answer3}
+                    </Answer> : null}
+                    {faq.answer4 ? <Answer
+                      variants={{
+                        open: { opacity: 1, height: "auto", marginTop: "16px" },
+                        collapsed: { opacity: 0, height: 0, marginTop: "0px" }
+                      }}
+                      initial="collapsed"
+                      animate={activeQuestionIndex === index ? "open" : "collapsed"}
+                      transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+                    >
+                      {faq.answer4}
+                    </Answer> : null}
                   </FAQ>
                 ))}
               </FAQSContainer>
