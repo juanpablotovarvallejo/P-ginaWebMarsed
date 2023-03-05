@@ -63,22 +63,24 @@ export default () => {
    */
 
   const cards = [
-    {
-      imageSrc: ShieldIconImage,
-      title: "Ads Management",
-      description: "We create and manage ads that you need, from creation to deployment. Lorem ipsum donor sit amet consicou."
-    },
-    { imageSrc: SupportIconImage, title: "Video Marketing" },
-    { imageSrc: CustomizeIconImage, title: "Customer Relation" },
-    { imageSrc: ReliableIconImage, title: "Product Outreach" },
-    { imageSrc: FastIconImage, title: "PR Campaign" },
-    { imageSrc: SimpleIconImage, title: "Product Expansion" }
+    { imageSrc: ShieldIconImage,title: "Comercialización en Tiempo real"},
+    { imageSrc: SupportIconImage, title: "Inspecciones Técnicas, Datos, Mantenimiento, Nuevos Servicios, Daños" },
+    { imageSrc: CustomizeIconImage, title: "Reclamos,Monitoreo y Control" },
+    { imageSrc: ReliableIconImage, title: "Levantamiento de Activos" },
+    { imageSrc: FastIconImage, title: "Catastro Medidores y Clientes" },
+    { imageSrc: SimpleIconImage, title: "Instalaciones Medidores, Redes, Alumbrado Público, Transformadores, Postes" },
+    { imageSrc: ShieldIconImage,title: "Reporte de Novedades, Actualización de Datos permanente"},
+    { imageSrc: SupportIconImage, title: "Gestión de Cartera, Notificaciones, Corte, Reconexión del Servicio" },
+    { imageSrc: CustomizeIconImage, title: "Mantenimiento de Plantas de Agua" },
+    { imageSrc: ReliableIconImage, title: "Redes y Válvulas de Distribución con Telemetría" },
+    { imageSrc: FastIconImage, title: "Sistemas Canalizados de Gas para Edificios, Conjuntos, Centros Comerciales, Residencias" },
+    { imageSrc: SimpleIconImage, title: "Lectura de Consumo, Facturación, Reparto de Planillas, Lectofacturación" },
   ];
 
   return (
     <Container>
       <ThreeColumnContainer>
-        <Heading>Our Professional <span tw="text-primary-500">Services</span></Heading>
+        <Heading>Nuestros <span tw="text-primary-500">Servicios</span></Heading>
         {cards.map((card, i) => (
           <Column key={i}>
             <Card>
@@ -86,9 +88,9 @@ export default () => {
                 <img src={card.imageSrc || defaultCardImage} alt="" />
               </span>
               <span className="textContainer">
-                <span className="title">{card.title || "Fully Secure"}</span>
+                <span className="title">{card.title}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud. Sic Semper Tyrannis. Neoas Calie artel."}
+                  {card.description}
                 </p>
               </span>
             </Card>

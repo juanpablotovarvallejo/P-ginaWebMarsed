@@ -8,7 +8,8 @@ import Features from "components/features/ThreeColCenteredStatsPrimaryBackground
 import Clientes from "components/cards/ProfileThreeColGrid"
 import MainFeature from "components/features/TwoColSingleFeatureWithStats2.js";
 import MainFeature2 from "components/features/TwoColWithTwoFeaturesAndButtons.js";
-import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
+import Servicios from "components/features/DashedBorderSixFeatures.js";
+import Control from "components/features/ThreeColSimple.js";
 import Blog from "components/blogs/ThreeColSimpleWithImageAndDashedBorder.js";
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage";
 import Productos from "components/faqs/SimpleWithSideImage.js";
@@ -34,7 +35,8 @@ export default () => (
         </>
       }
     />
-    <Portfolio />
+    <Servicios />
+    <Control />
     <Testimonial
       subheading="Testimonials"
       heading={

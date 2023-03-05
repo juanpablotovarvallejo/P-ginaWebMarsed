@@ -62,19 +62,22 @@ export default () => {
         Inicio
       </NavLink>
       <NavLink href="#">
+        Nosotros
+      </NavLink>
+      <NavLink href="#">
+        Productos
+      </NavLink>
+      <NavLink href="#">
         Servicios
       </NavLink>
       <NavLink href="#">
-        Acerca de nosotros
+        Control
       </NavLink>
       <NavLink href="#">
         Contacto
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink>
     </NavLinks>
   ];
 
@@ -91,7 +94,6 @@ export default () => {
               <br />
               <SlantedBackground>Empresa de servicios técnicos especializados</SlantedBackground>
             </Heading>
-            <PrimaryAction>Servicios</PrimaryAction>
           </LeftColumn>
           <RightColumn>
           </RightColumn>

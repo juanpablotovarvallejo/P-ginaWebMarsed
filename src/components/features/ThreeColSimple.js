@@ -18,7 +18,7 @@ const ThreeColumnContainer = styled.div`
   ${tw`mt-10 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto`}
 `;
 const Column = styled.div`
-  ${tw`lg:w-1/3 max-w-xs`}
+  ${tw`lg:w-1/4 max-w-xs`}
 `;
 
 const Card = styled.a`
@@ -54,26 +54,24 @@ export default ({
   cards = [
     {
       imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
-      url: "https://timerse.com"
+      title: "Corte y reconexión de tu servicio",
     },
     {
       imageSrc: SupportIconImage,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com"
+      title: "Consumo en tiempo real"
     },
     {
       imageSrc: CustomizeIconImage,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com"
+      title: "Reporte de consumos"
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Alertas de desfases"
     }
   ],
-  linkText = "Learn More",
-  heading = "",
-  subheading = "",
+  linkText = "",
+  heading = "Medición Inteligente de Largo Alcance (MILA)",
+  subheading = "Control",
   description = "",
   imageContainerCss = null,
   imageCss = null
