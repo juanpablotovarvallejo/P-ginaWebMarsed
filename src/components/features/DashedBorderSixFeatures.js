@@ -3,7 +3,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 //eslint-disable-next-line
 import { css } from "styled-components/macro";
-import { SectionHeading } from "components/misc/Headings.js";
+import { SectionHeading, Subheading } from "components/misc/Headings.js";
 
 import defaultCardImage from "../../images/shield-icon.svg";
 
@@ -80,6 +80,7 @@ export default () => {
   return (
     <Container>
       <ThreeColumnContainer>
+      <Subheading>Servicios</Subheading>
         <Heading>Nuestros <span tw="text-primary-500">Servicios</span></Heading>
         {cards.map((card, i) => (
           <Column key={i}>

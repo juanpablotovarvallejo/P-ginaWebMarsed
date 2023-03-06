@@ -27,17 +27,17 @@ const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:t
 
 const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0`
 const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 hocus:border-primary-500`
-const Textarea = styled(Input).attrs({as: "textarea"})`
+const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
 export default ({
-  subheading = "Contact Us",
-  heading = <>Feel free to <span tw="text-primary-500">get in touch</span><wbr/> with us.</>,
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  submitButtonText = "Send",
+  subheading = "Contáctenos",
+  heading = <>Siéntase libre de  <span tw="text-primary-500">contactarse</span> con nosotros<wbr /></>,
+  description = "",
+  submitButtonText = "Enviar",
   formAction = "#",
   formMethod = "get",
   textOnLeft = true,
@@ -48,7 +48,14 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.8988406623887!2d-78.48796389427642!3d-0.18429169998804823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b554b43e505%3A0x759ebf6e98dbeb41!2sEmpresa%20Marsed%20S.A!5e0!3m2!1ses!2sec!4v1678070155701!5m2!1ses!2sec"
+            width="600"
+            height="450"
+            style={{ border: "0" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
@@ -56,10 +63,10 @@ export default ({
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
             <Form action={formAction} method={formMethod}>
-              <Input type="email" name="email" placeholder="Your Email Address" />
-              <Input type="text" name="name" placeholder="Full Name" />
-              <Input type="text" name="subject" placeholder="Subject" />
-              <Textarea name="message" placeholder="Your Message Here" />
+              <Input type="email" name="email" placeholder="Tu correo electrónico" />
+              <Input type="text" name="name" placeholder="Nombre" />
+              <Input type="text" name="subject" placeholder="Asunto" />
+              <Textarea name="message" placeholder="Tu mensaje" />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
