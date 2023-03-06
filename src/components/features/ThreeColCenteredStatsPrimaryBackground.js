@@ -48,6 +48,7 @@ export default ({
   ]
 }) => {
   return (
+    <div id="Nosotros">
     <Container>
       <ContentWithPaddingXl>
         <HeadingContainer>
@@ -68,5 +69,7 @@ export default ({
         </StatsContainer> */}
       </ContentWithPaddingXl>
     </Container>
+    </div>
+
   );
 };

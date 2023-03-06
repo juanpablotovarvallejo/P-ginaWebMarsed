@@ -6,8 +6,7 @@ import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 
 import LogoImage from "images/logo.png";
 import { ReactComponent as FacebookIcon } from "images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "images/twitter-icon.svg";
-import { ReactComponent as YoutubeIcon } from "images/youtube-icon.svg";
+import { ReactComponent as LinkedinIcon } from "images/linkedin-icon.svg";
 
 const Container = tw.div`relative bg-gray-900 text-gray-100 -mx-8 -mb-8 px-8`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`
@@ -71,7 +70,7 @@ export default () => {
             <LinkList>
               <LinkListItem>
               <b>Teléfono:    </b>
-                <Link href="tel:123456">1234556</Link>
+                <Link href="tel:123456">02259553</Link> / <Link href="tel:123456">22920309</Link> 
               </LinkListItem>
               <LinkListItem>
               <b>Correo electrónico:    </b>
@@ -79,14 +78,11 @@ export default () => {
               </LinkListItem>
             </LinkList>
             <SocialLinksContainer>
-              <SocialLink href="https://facebook.com">
+              <SocialLink href="https://www.facebook.com/marsed.sa.1/">
                 <FacebookIcon />
               </SocialLink>
-              <SocialLink href="https://twitter.com">
-                <TwitterIcon />
-              </SocialLink>
-              <SocialLink href="https://youtube.com">
-                <YoutubeIcon />
+              <SocialLink href="https://www.linkedin.com/in/marsed-s-a-23b362212">
+                <LinkedinIcon />
               </SocialLink>
             </SocialLinksContainer>
           </Column>

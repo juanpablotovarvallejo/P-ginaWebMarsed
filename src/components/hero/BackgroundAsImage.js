@@ -56,24 +56,68 @@ const StyledResponsiveVideoEmbed = styled(ResponsiveVideoEmbed)`
 `;
 
 export default (props) => {
+
+  const scrollInicio = (e) =>{
+    const element = document.getElementById('Inicio');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+    }
+  }
+  const scrollNosotros = (e) =>{
+    const element = document.getElementById('Nosotros');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth'})
+    }
+  }
+  const scrollProductos = (e) =>{
+    const element = document.getElementById('Productos');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+    }
+  }
+  const scrollServicios = (e) =>{
+    const element = document.getElementById('Servicios');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+    }
+  }
+  const scrollControl = (e) =>{
+    const element = document.getElementById('Control');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+    }
+  }
+  const scrollContactos = (e) =>{
+    const element = document.getElementById('Contacto');
+    e.preventDefault();
+    if (element){
+      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+    }
+  }
+
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink>
+      <NavLink onClick={scrollInicio} href="">
         Inicio
       </NavLink>
-      <NavLink href="Nosotros">
+      <NavLink onClick={scrollNosotros} href="">
         Nosotros
       </NavLink>
-      <NavLink href="Productos">
+      <NavLink onClick={scrollProductos} href="">
         Productos
       </NavLink>
-      <NavLink href="Servicios">
+      <NavLink onClick={scrollServicios} href="">
         Servicios
       </NavLink>
-      <NavLink href="Control">
+      <NavLink onClick={scrollControl} href="">
         Control
       </NavLink>
-      <NavLink href="Contacto">
+      <NavLink onClick={scrollContactos} href="">
         Contacto
       </NavLink>
     </NavLinks>,
@@ -90,9 +134,7 @@ export default (props) => {
           <LeftColumn>
             <Notification>Marsed S.A.</Notification>
             <Heading>
-              <span>Contrata la mejor</span>
-              <br />
-              <SlantedBackground>Empresa de servicios técnicos especializados</SlantedBackground>
+              <SlantedBackground>Empresa de servicios técnicos especializados y desarrollo de software</SlantedBackground>
             </Heading>
           </LeftColumn>
           <RightColumn>

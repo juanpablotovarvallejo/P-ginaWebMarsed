@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 import useInView from "helpers/useInView";
 
 const StyledDiv = tw.div`font-display min-h-screen text-secondary-500 p-8 overflow-hidden`;
+
+
 function AnimationReveal({ disabled, children }) {
   if (disabled) {
     return <>{children}</>;
   }
-
   if (!Array.isArray(children)) children = [children];
-
   const directions = ["left", "right"];
   const childrenWithAnimation = children.map((child, i) => {
     return (
@@ -27,26 +27,20 @@ function AnimationReveal({ disabled, children }) {
 
 function AnimatedSlideInComponent({ direction = "left", offset = 30, children }) {
   const [ref, inView] = useInView({ margin: `-${offset}px 0px 0px 0px`});
-
   const x = { target: "0%" };
-
   if (direction === "left") x.initial = "-150%";
   else x.initial = "150%";
-
   return (
     <div ref={ref}>
-      <motion.section
+      <motion.div
         initial={{ x: x.initial }}
         animate={{ 
           x: inView && x.target,
-          transitionEnd:{
-            x: inView && 0
-          }
+          transitionEnd:{ x: inView && x.target }
         }}
-        transition={{ type: "spring", damping: 19 }}
-      >
+        transition={{ type: "spring", damping: 19 }}>
         {children}
-      </motion.section>
+      </motion.div>
     </div>
   );
 }

@@ -35,7 +35,7 @@ const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
 export default ({
   subheading = "Contáctenos",
-  heading = <>Siéntase libre de  <span tw="text-primary-500">contactarse</span> con nosotros<wbr /></>,
+  heading = <><span tw="text-primary-500">Contacto</span><wbr /></>,
   description = "",
   submitButtonText = "Enviar",
   formAction = "#",
@@ -51,7 +51,7 @@ export default ({
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.8988406623887!2d-78.48796389427642!3d-0.18429169998804823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b554b43e505%3A0x759ebf6e98dbeb41!2sEmpresa%20Marsed%20S.A!5e0!3m2!1ses!2sec!4v1678070155701!5m2!1ses!2sec"
             width="600"
             height="450"
-            style={{ border: "0" }}
+            style={{ border: "0", marginTop: "10rem" }}
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">

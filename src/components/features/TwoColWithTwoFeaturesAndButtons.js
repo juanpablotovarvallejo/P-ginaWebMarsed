@@ -49,10 +49,10 @@ export default ({
   subheading = "Nuestra experiencia",
   heading = (
     <>
-      Somos un <span tw="text-primary-500">equipo</span>
+      <span tw="text-primary-500">Equipo</span>
     </>
   ),
-  description = "dedicado de profesionales dispuestos a brindarles un servicio de calidad",
+  description = "de profesionales dispuestos a brindarles un servicio de calidad",
   primaryButtonText = "See Our Portfolio",
   primaryButtonUrl = "https://timerse.com",
   features = null,
@@ -101,9 +101,9 @@ export default ({
                 </Feature>
               ))}
             </Features>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
+            {/* <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
-            </PrimaryButton>
+            </PrimaryButton> */}
           </TextContent>
         </TextColumn>
       </TwoColumn>

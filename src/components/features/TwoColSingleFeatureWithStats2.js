@@ -26,7 +26,7 @@ const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+const Description = tw.p`mt-4 text-justify! text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
 
 const Statistics = tw.div`flex flex-col items-center sm:block text-center md:text-left mt-4`;
 const Statistic = tw.div`text-left sm:inline-block sm:mr-12 last:mr-0 mt-4`;
@@ -46,8 +46,8 @@ export default ({
     </>
   ),
   subheading = "Servicios Técnicos Especializados",
-  description = "MARSED S.A. es una empresa que brinda servicios técnicos especializados de monitoreo y control de servicios públicos "+
-  "domiciliarios con alto reconocimiento nacional en la prestación de servicios tecnológicos con alto nivel de calidad, excelencia y rentabilidad,"+
+  description = "MARSED S.A. es una empresa que brinda servicios técnicos especializados de monitoreo y control de servicios públicos " +
+  "domiciliarios con alto reconocimiento nacional en la prestación de servicios tecnológicos con un excelente nivel de calidad, excelencia y rentabilidad," +
   "proponiendo soluciones técnicas integradoras e innovadoras orientadas a satisfacer las necesidades de los usuarios.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
@@ -80,18 +80,19 @@ export default ({
   if (!statistics) statistics = defaultStatistics;
 
   return (
-    <Container>
-      <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
-        <ImageColumn css={imageContainerCss}>
-          {imageInsideDiv ? <Image imageSrc={imageSrc} css={imageCss} /> : <img src={imageSrc} css={imageCss} alt="" />}
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Heading>{heading}</Heading>
-            {subheading && <Subheading>{subheading}</Subheading>}
-            <Description>{description}</Description>
-            {/* <Statistics>
+    <div id="Inicio">
+      <Container>
+        <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
+          <ImageColumn css={imageContainerCss}>
+            {imageInsideDiv ? <Image imageSrc={imageSrc} css={imageCss} /> : <img src={imageSrc} css={imageCss} alt="" />}
+            {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
+          </ImageColumn>
+          <TextColumn textOnLeft={textOnLeft}>
+            <TextContent>
+              <Heading>{heading}</Heading>
+              {subheading && <Subheading>{subheading}</Subheading>}
+              <Description>{description}</Description>
+              {/* <Statistics>
               {statistics.map((statistic, index) => (
                 <Statistic key={index}>
                   <Value>{statistic.value}</Value>
@@ -99,12 +100,14 @@ export default ({
                 </Statistic>
               ))}
             </Statistics> */}
-            {/* <PrimaryButton as="a" href={primaryButtonUrl}>
+              {/* <PrimaryButton as="a" href={primaryButtonUrl}>
               {primaryButtonText}
             </PrimaryButton> */}
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
-    </Container>
+            </TextContent>
+          </TextColumn>
+        </TwoColumn>
+      </Container>
+    </div>
+
   );
 };
