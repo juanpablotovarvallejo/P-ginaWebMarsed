@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/P-ginaWebMarsed/static/css/main.c61fe05b.css",
-    "main.js": "/P-ginaWebMarsed/static/js/main.817707c8.js",
+    "main.js": "/P-ginaWebMarsed/static/js/main.9d9eb4fc.js",
     "static/media/MainLandingPageHero.png": "/P-ginaWebMarsed/static/media/MainLandingPageHero.30b380787ef7adb09eb6.png",
     "static/media/AgencyLandingPage.jpeg": "/P-ginaWebMarsed/static/media/AgencyLandingPage.717f8ed6737d6161b153.jpeg",
     "static/media/HotelTravelLandingPage.jpeg": "/P-ginaWebMarsed/static/media/HotelTravelLandingPage.7cba2215c02e6e82fc39.jpeg",
@@ -98,10 +98,10 @@
     "static/media/arrow-right-3-icon.svg": "/P-ginaWebMarsed/static/media/arrow-right-3-icon.d415f77e8dc81ff77fdb53c0ee2da771.svg",
     "static/media/handle-icon.svg": "/P-ginaWebMarsed/static/media/handle-icon.75eb6395a03cd55833f64fd24df39ff5.svg",
     "main.c61fe05b.css.map": "/P-ginaWebMarsed/static/css/main.c61fe05b.css.map",
-    "main.817707c8.js.map": "/P-ginaWebMarsed/static/js/main.817707c8.js.map"
+    "main.9d9eb4fc.js.map": "/P-ginaWebMarsed/static/js/main.9d9eb4fc.js.map"
   },
   "entrypoints": [
     "static/css/main.c61fe05b.css",
-    "static/js/main.817707c8.js"
+    "static/js/main.9d9eb4fc.js"
   ]
 }
