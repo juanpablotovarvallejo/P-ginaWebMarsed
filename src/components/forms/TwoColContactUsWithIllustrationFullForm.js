@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import emailjs from '@emailjs/browser';
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -43,9 +44,24 @@ export default ({
   textOnLeft = true,
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_4v7nhqn', 'template_nve1vug', form.current, 'wV1ZoxBB9FCzNSaYb')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => { 
+            console.log(error.text);    
+        });
+        document.querySelectorAll('input').forEach(element => {
+            element.value = '';
+        });
+        document.querySelector('textarea').value = '';
+};
 
   return (
-    <Container>
+    <Container id="Contacto">
       <TwoColumn>
         <ImageColumn>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.8988406623887!2d-78.48796389427642!3d-0.18429169998804823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b554b43e505%3A0x759ebf6e98dbeb41!2sEmpresa%20Marsed%20S.A!5e0!3m2!1ses!2sec!4v1678070155701!5m2!1ses!2sec"
@@ -62,12 +78,12 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="email" name="email" placeholder="Tu correo electrónico" />
-              <Input type="text" name="name" placeholder="Nombre" />
-              <Input type="text" name="subject" placeholder="Asunto" />
+            <Form ref={form} action={formAction} method={formMethod}>
+              <Input type="email" name="from_email" placeholder="Tu correo electrónico" />
+              <Input type="text" name="from_name" placeholder="Nombre" />
+              <Input type="text" name="from_subject" placeholder="Asunto" />
               <Textarea name="message" placeholder="Tu mensaje" />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
+              <SubmitButton onClick={sendEmail} type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>

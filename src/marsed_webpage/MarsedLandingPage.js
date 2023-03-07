@@ -35,7 +35,7 @@ export default () => (
     />
     <Servicios />
     <Control />
-    <Contacto refs="contacto"/>
+    <Contacto />
     <Footer />
   </AnimationRevealPage>
 );

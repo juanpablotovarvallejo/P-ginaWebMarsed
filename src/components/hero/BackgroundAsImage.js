@@ -61,42 +61,42 @@ export default (props) => {
     const element = document.getElementById('Inicio');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
   const scrollNosotros = (e) =>{
     const element = document.getElementById('Nosotros');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
   const scrollProductos = (e) =>{
     const element = document.getElementById('Productos');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
   const scrollServicios = (e) =>{
     const element = document.getElementById('Servicios');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
   const scrollControl = (e) =>{
     const element = document.getElementById('Control');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
   const scrollContactos = (e) =>{
     const element = document.getElementById('Contacto');
     e.preventDefault();
     if (element){
-      element.scrollIntoView({behavior: 'smooth', block: 'start'})
+      window.scrollTo(0,element.getBoundingClientRect().top)
     }
   }
 

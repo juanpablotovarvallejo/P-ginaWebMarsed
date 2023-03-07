@@ -48,8 +48,7 @@ export default ({
   ]
 }) => {
   return (
-    <div id="Nosotros">
-    <Container>
+    <Container id = "Nosotros">
       <ContentWithPaddingXl>
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
@@ -68,8 +67,6 @@ export default ({
           ))}
         </StatsContainer> */}
       </ContentWithPaddingXl>
-    </Container>
-    </div>
-
+    </Container>  
   );
 };
